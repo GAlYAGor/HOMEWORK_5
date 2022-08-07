@@ -4,13 +4,14 @@
 int[] Massif = new int[10];
 int sum = 0;
 
-void RandomNumbers(int[] numbers)
+void GoArray(int[] array, int min, int max)
 {
-    for (int i = 0; i < numbers.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        numbers[i] = new Random().Next(0, 10);
+        array[i] = new Random().Next(min, max+1);
     }
 }
+
 void GetArray(int[] numbers)
 {
 
@@ -28,8 +29,8 @@ void SumNum(int[] numbers)
     }
 }
 
-RandomNumbers(Massif);
-Console.WriteLine("массив: ");
+Console.Write("массив: ");
+GoArray( Massif, 0, 10);
 GetArray(Massif);
 
 SumNum(Massif);
